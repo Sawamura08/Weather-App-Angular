@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Quicksand", sans-serif;
+}
+
+$primaryColor: #748cf1;
+$font: "Quicksand", sans-serif;
+$bg-color: #adb5bd;
+
+.weather-info {
+	.search-wrapper {
+		input[type="text"] {
+			background-color: #e9ecef;
+			font-family: $font;
+		}
+
+		input[type="text"]:focus {
+			outline: none;
+			border: solid 2px $primaryColor;
+			transition: all ease-in-out 0.1s;
+		}
+		.search-icon {
+			font-size: clamp(0.7rem, 1.5vw, 4rem);
+			color: $primaryColor;
+		}
+	}
+
+	.aside-info {
+		.weather-icon {
+			font-size: clamp(1vw, 12vw, 15rem);
+			color: $bg-color;
+			width: 40%;
+			margin: 0 auto;
+		}
+	}
+}
