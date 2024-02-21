@@ -38,5 +38,44 @@ $bg-color: #adb5bd;
 			width: 40%;
 			margin: 0 auto;
 		}
+
+		.temperature {
+			font-size: clamp(1rem, 4vw, 6rem);
+		}
+
+		.weather-condition {
+		}
+
+		.date-wrapper {
+			.date {
+				font-size: clamp(0.5rem, 1.5vw, 3rem);
+				text-align: center;
+			}
+
+			.day-time {
+				font-size: clamp(1rem, 2vw, 4rem);
+				text-align: center;
+			}
+		}
+
+		footer {
+			h1 {
+				font-size: clamp(1.2rem, 3vw, 7rem);
+			}
+		}
+	}
+}
+.weather-main-info {
+	background-color: #efefef;
+
+	.info-wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 4rem;
+
+		.infos {
+			width: 200px;
+			background-color: $primaryColor;
+		}
 	}
 }

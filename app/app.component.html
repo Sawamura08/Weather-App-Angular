@@ -16,33 +16,63 @@
 		<main class="w-full h-screen flex flex-row weather-main">
 			<section class="weather-info w-2/5 px-8">
 				<header class="search-wrapper w-full p-4 mb-4 relative">
-					<input type="text" class="search rounded-xl w-full px-4 py-2" placeholder="Manila" /><i
-						class="fa-solid fa-magnifying-glass absolute top-7 right-6 search-icon"
-					></i>
+					<input
+						type="text"
+						class="search rounded-xl w-full px-4 py-2"
+						[(ngModel)]="search"
+						placeholder="Input"
+						value="{{ search }}"
+					/><i class="fa-solid fa-magnifying-glass absolute top-7 right-6 search-icon"></i>
 				</header>
 				<section class="aside-info">
 					<h1 class="weather-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-							<path
-								fill="currentColor"
-								d="M6.5 20q-2.275 0-3.887-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.312 3.188T18.5 20zm0-2h12q1.05 0 1.775-.725T21 15.5q0-1.05-.725-1.775T18.5 13H17v-2q0-2.075-1.463-3.538T12 6Q9.925 6 8.463 7.463T7 11h-.5q-1.45 0-2.475 1.025T3 14.5q0 1.45 1.025 2.475T6.5 18m5.5-6"
-							/>
-						</svg>
+						<img src="../assets/clouds.gif" alt="" />
 					</h1>
-					<h2 class="temperature">25&deg;c</h2>
-					<h3 class="weather-condition">Cloudy</h3>
-					<div class="line-bar"></div>
+					<h2 class="temperature font-normal text-center">25&deg;c</h2>
+					<h3 class="weather-condition text-xl text-center">Cloudy</h3>
+					<div class="line-bar w-3/4 mx-auto bg-slate-200 h-1 mt-4 mb-6"></div>
 
-					<section class="date-wrapper">
+					<section class="date-wrapper mb-8">
 						<h3 class="date">21 February 2024,</h3>
 						<h2 class="day-time">Wednesday, 5:40 AM</h2>
 					</section>
-					<footer class="location">
+					<footer class="location text-center">
 						<h1>Manila, Philippines</h1>
 					</footer>
 				</section>
 			</section>
-			<section class="weather-info w-3/4 bg-slate-400"></section>
+			<section class="weather-main-info w-3/4">
+				<h2 class="today">Today</h2>
+				<section class="info-wrapper grid text-white">
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Coordinates</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Humidity</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Real Feel</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>UV Index</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Pressure</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Change of rain</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Temperature History</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Sun</h3>
+					</div>
+					<div class="p-4 rounded-xl w-3/4 infos">
+						<h3>Moon</h3>
+					</div>
+				</section>
+			</section>
 		</main>
 	</body>
 </html>
