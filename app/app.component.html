@@ -22,6 +22,7 @@
 						[(ngModel)]="search"
 						placeholder="Input"
 						value="{{ search }}"
+						(keydown.enter)="sendSearchToService()"
 					/><i class="fa-solid fa-magnifying-glass absolute top-7 right-6 search-icon"></i>
 				</header>
 				<section class="aside-info">
@@ -46,6 +47,7 @@
 				<section class="info-wrapper grid text-white">
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Coordinates</h3>
+						<app-api-info [data]="data"></app-api-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Humidity</h3>
