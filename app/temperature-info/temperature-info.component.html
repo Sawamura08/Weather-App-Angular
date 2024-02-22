@@ -1,3 +1,4 @@
-<div class="temperature-wrapper" *ngIf="temparatureInfo">
-	<h3 class="temp">{{ this.temparatureInfo.main.temp }}</h3>
+<div class="temperature-wrapper" *ngIf="temperatureInfo">
+	<h3 class="temp">Main Temperature - {{ mainTemp | number : "1.2-2" }}&deg;</h3>
+	<h3 class="temp">Feels Like - {{ mainFeels | number : "1.2-2" }}&deg;</h3>
 </div>

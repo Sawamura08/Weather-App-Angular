@@ -8,6 +8,9 @@ import { AppComponent } from "./app.component";
 import { CoordinatesInfoComponent } from "./coordinates-info/coordinates-info.component";
 import { WeatherInfoComponent } from "./weather-info/weather-info.component";
 import { TemperatureInfoComponent } from "./temperature-info/temperature-info.component";
+import { MinMaxTempInfoComponent } from './min-max-temp-info/min-max-temp-info.component';
+import { PressureInfoComponent } from './pressure-info/pressure-info.component';
+import { HumidityInfoComponent } from './humidity-info/humidity-info.component';
 
 @NgModule({
 	declarations: [
@@ -15,6 +18,9 @@ import { TemperatureInfoComponent } from "./temperature-info/temperature-info.co
 		CoordinatesInfoComponent,
 		WeatherInfoComponent,
 		TemperatureInfoComponent,
+  MinMaxTempInfoComponent,
+  PressureInfoComponent,
+  HumidityInfoComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 	providers: [],

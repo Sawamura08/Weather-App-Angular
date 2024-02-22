@@ -1,17 +1,25 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnChanges, SimpleChanges } from "@angular/core";
 
 @Component({
 	selector: "app-temperature-info",
 	templateUrl: "./temperature-info.component.html",
 	styleUrls: ["./temperature-info.component.scss"],
 })
-export class TemperatureInfoComponent implements OnInit {
-	@Input() temparatureInfo: any;
+export class TemperatureInfoComponent implements OnChanges {
+	@Input() temperatureInfo: any;
 
-	mainTemp: any;
+	mainData: any;
+	mainTemp: number = 0;
+	mainFeels: number = 0;
 
-	ngOnInit(): void {
-		this.mainTemp = this.temparatureInfo;
-		console.log(this.temparatureInfo);
+	ngOnChanges(changes: SimpleChanges): void {
+		if (changes["temperatureInfo"] && changes["temperatureInfo"].currentValue) {
+			this.mainData = changes["temperatureInfo"].currentValue.main;
+
+			if (this.mainData) {
+				this.mainTemp = this.mainData.temp - 273.15;
+				this.mainFeels = this.mainData.feels_like - 273.15;
+			}
+		}
 	}
 }

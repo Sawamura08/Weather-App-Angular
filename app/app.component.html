@@ -55,16 +55,19 @@
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Real Feel</h3>
-						<app-temperature-info [temparatureInfo]="data"></app-temperature-info>
+						<app-temperature-info [temperatureInfo]="data"></app-temperature-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>UV Index</h3>
+						<h3>Min & Max</h3>
+						<app-min-max-temp-info [minMax]="data"></app-min-max-temp-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Pressure</h3>
+						<app-pressure-info [pressure]="data"></app-pressure-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Change of rain</h3>
+						<h3>Humidity</h3>
+						<app-humidity-info [humidity]="data"></app-humidity-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Temperature History</h3>
