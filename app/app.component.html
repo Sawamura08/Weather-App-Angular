@@ -47,13 +47,15 @@
 				<section class="info-wrapper grid text-white">
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Coordinates</h3>
-						<app-api-info [data]="data"></app-api-info>
+						<app-coordinates-info [data]="data"></app-coordinates-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Humidity</h3>
+						<app-weather-info [weatherInfo]="data"></app-weather-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>Real Feel</h3>
+						<app-temperature-info [temparatureInfo]="data"></app-temperature-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
 						<h3>UV Index</h3>
