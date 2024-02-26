@@ -14,6 +14,7 @@ import { HumidityInfoComponent } from "./humidity-info/humidity-info.component";
 import { SunriseInfoComponent } from "./sunrise-info/sunrise-info.component";
 import { SunsetInfoComponent } from './sunset-info/sunset-info.component';
 import { WindInfoComponent } from './wind-info/wind-info.component';
+import { GenericInfoComponent } from './generic-info/generic-info.component';
 
 @NgModule({
 	declarations: [
@@ -27,6 +28,7 @@ import { WindInfoComponent } from './wind-info/wind-info.component';
 		SunriseInfoComponent,
   SunsetInfoComponent,
   WindInfoComponent,
+  GenericInfoComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 	providers: [],
