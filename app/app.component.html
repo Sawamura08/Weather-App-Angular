@@ -29,16 +29,16 @@
 					<h1 class="weather-icon">
 						<img src="../assets/clouds.gif" alt="" />
 					</h1>
-					<h2 class="temperature font-normal text-center">25&deg;c</h2>
+					<h2 class="temperature font-normal text-center">{{ mainTemp | number : "1.1-1" }}&deg;c</h2>
 					<h3 class="weather-condition text-xl text-center">Cloudy</h3>
 					<div class="line-bar w-3/4 mx-auto bg-slate-200 h-1 mt-4 mb-6"></div>
 
 					<section class="date-wrapper mb-8">
-						<h3 class="date">21 February 2024,</h3>
-						<h2 class="day-time">Wednesday, 5:40 AM</h2>
+						<h3 class="date">{{ getDate | date : "fullDate" }}</h3>
+						<h2 class="day-time">{{ getDate | date : "mediumTime" }}</h2>
 					</section>
 					<footer class="location text-center">
-						<h1>Manila, Philippines</h1>
+						<h1>{{ place }} , Philippines</h1>
 					</footer>
 				</section>
 			</section>

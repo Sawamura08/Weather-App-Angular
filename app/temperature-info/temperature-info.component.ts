@@ -9,7 +9,6 @@ export class TemperatureInfoComponent implements OnChanges {
 	@Input() temperatureInfo: any;
 
 	mainData: any;
-	mainTemp: number = 0;
 	mainFeels: number = 0;
 
 	ngOnChanges(changes: SimpleChanges): void {
@@ -17,7 +16,6 @@ export class TemperatureInfoComponent implements OnChanges {
 			this.mainData = changes["temperatureInfo"].currentValue.main;
 
 			if (this.mainData) {
-				this.mainTemp = this.mainData.temp - 273.15;
 				this.mainFeels = this.mainData.feels_like - 273.15;
 			}
 		}
