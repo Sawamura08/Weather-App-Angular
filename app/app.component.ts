@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
 	sendSearchToService() {
 		this.data = "";
-		this.noData = false;
+
 		this.manageApi.setSearchDataToUrl(this.search);
 
 		this.manageApi.getApiData().subscribe(
@@ -36,6 +36,7 @@ export class AppComponent implements OnInit {
 				this.data = objectData;
 			},
 			(error) => {
+				this.noData = false;
 				console.error("Error Fetching Data:", error);
 			}
 		);

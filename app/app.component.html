@@ -29,7 +29,7 @@
 				<!-- if there are no data from API -->
 				<section class="aside-info" *ngIf="!noData && !data">
 					<img src="../assets/cloud.png" alt="" class="w-1/2 mx-auto img" />
-					<h1 class="no-data" class="text-center font-medium">No Data Found</h1>
+					<h1 class="no-data" class="text-center font-medium text-3xl">No Data Found</h1>
 				</section>
 
 				<!-- if there is a data -->
@@ -58,39 +58,39 @@
 				<h2 class="today">Today</h2>
 				<section class="info-wrapper grid text-white">
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Coordinates</h3>
+						<h3 class="font-semibold">Coordinates</h3>
 						<app-coordinates-info [data]="data"></app-coordinates-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Humidity</h3>
+						<h3 class="font-semibold">Weather</h3>
 						<app-weather-info [weatherInfo]="data"></app-weather-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Real Feel</h3>
+						<h3 class="font-semibold">Real Feel</h3>
 						<app-temperature-info [temperatureInfo]="data"></app-temperature-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Min & Max</h3>
+						<h3 class="font-semibold">Min & Max</h3>
 						<app-min-max-temp-info [minMax]="data"></app-min-max-temp-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Pressure</h3>
+						<h3 class="font-semibold">Pressure</h3>
 						<app-pressure-info [pressure]="data"></app-pressure-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Humidity</h3>
+						<h3 class="font-semibold">Humidity</h3>
 						<app-humidity-info [humidity]="data"></app-humidity-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Wind</h3>
+						<h3 class="font-semibold">Wind</h3>
 						<app-wind-info [winds]="data"></app-wind-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Sunrise</h3>
+						<h3 class="font-semibold">Sunrise</h3>
 						<app-sunrise-info [sunrise]="data"></app-sunrise-info>
 					</div>
 					<div class="p-4 rounded-xl w-3/4 infos">
-						<h3>Sunset</h3>
+						<h3 class="font-semibold">Sunset</h3>
 						<app-sunset-info [sunset]="data"></app-sunset-info>
 					</div>
 				</section>
