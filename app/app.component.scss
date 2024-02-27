@@ -32,13 +32,6 @@ $bg-color: #adb5bd;
 	}
 
 	.aside-info {
-		.weather-icon {
-			font-size: clamp(1vw, 12vw, 15rem);
-			color: $bg-color;
-			width: 40%;
-			margin: 0 auto;
-		}
-
 		.date-wrapper {
 			.date {
 				font-size: clamp(0.5rem, 1.5vw, 3rem);

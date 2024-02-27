@@ -27,9 +27,7 @@
 					/><i class="fa-solid fa-magnifying-glass absolute top-7 right-6 search-icon"></i>
 				</header>
 				<section class="aside-info">
-					<h1 class="weather-icon">
-						<img src="../assets/clouds.gif" alt="" />
-					</h1>
+					<app-generic-info [icon]="data"></app-generic-info>
 					<app-generic-info [mainTemp]="data"></app-generic-info>
 					<!-- main temperature -->
 					<app-generic-info [weatherCondition]="data"></app-generic-info>
@@ -41,7 +39,7 @@
 					</section>
 					<footer class="location text-center">
 						<app-generic-info [place]="data"></app-generic-info>
-						<app-generic-info [icon]="data"></app-generic-info>
+
 						<!-- enter place of the user -->
 					</footer>
 				</section>

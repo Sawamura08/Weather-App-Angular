@@ -1,9 +1,11 @@
 <h3 class="temperature" *ngIf="mainTemp">{{ temp | number : "1.1-1" }}&deg; c</h3>
 
-<h3 class="city-location" *ngIf="place">{{ place.name }},</h3>
+<h3 class="city-location" *ngIf="place">{{ place.name }}, Philippines</h3>
 
 <h4 class="weather" class="text-xl text-center" *ngIf="weatherCondition">
 	{{ weatherCondition.weather[0].main }}
 </h4>
 
-<img [src]="imgPath" alt="" *ngIf="icon" />
+<div class="weather-icon w-2/5 mx-auto rounded-xl">
+	<img [src]="imgPath" alt="" *ngIf="icon" class="icon" />
+</div>

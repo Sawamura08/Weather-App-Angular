@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
 	search: string = "Manila";
 	data: any;
 	getDate: any;
+	noData: boolean = true;
 
 	ngOnInit(): void {
 		this.manageApi.getApiData().subscribe((objectData) => {
@@ -27,9 +28,16 @@ export class AppComponent implements OnInit {
 	sendSearchToService() {
 		this.manageApi.setSearchDataToUrl(this.search);
 
-		this.manageApi.getApiData().subscribe((objectData) => {
-			this.data = objectData;
-		});
+		this.manageApi.getApiData().subscribe(
+			(objectData) => {
+				this.data = objectData;
+			},
+			(error) => {
+				console.error("Error Fetching Data:", error);
+				console.log("nodata");
+				this.noData = false;
+			}
+		);
 		this.search = "";
 	}
 
