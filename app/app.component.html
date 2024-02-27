@@ -26,13 +26,22 @@
 						(click)="clearInputBox()"
 					/><i class="fa-solid fa-magnifying-glass absolute top-7 right-6 search-icon"></i>
 				</header>
-				<section class="aside-info">
+				<!-- if there are no data from API -->
+				<section class="aside-info" *ngIf="!noData && !data">
+					<img src="../assets/cloud.png" alt="" class="w-1/2 mx-auto img" />
+					<h1 class="no-data" class="text-center font-medium">No Data Found</h1>
+				</section>
+
+				<!-- if there is a data -->
+				<section class="aside-info" *ngIf="noData">
 					<app-generic-info [icon]="data"></app-generic-info>
 					<app-generic-info [mainTemp]="data"></app-generic-info>
+
 					<!-- main temperature -->
 					<app-generic-info [weatherCondition]="data"></app-generic-info>
 					<div class="line-bar w-3/4 mx-auto bg-slate-200 h-1 mt-4 mb-6"></div>
 
+					<!-- full date and time -->
 					<section class="date-wrapper mb-8">
 						<h3 class="date">{{ getDate | date : "fullDate" }}</h3>
 						<h2 class="day-time">{{ getDate | date : "mediumTime" }}</h2>
@@ -44,6 +53,7 @@
 					</footer>
 				</section>
 			</section>
+
 			<section class="weather-main-info w-3/4">
 				<h2 class="today">Today</h2>
 				<section class="info-wrapper grid text-white">

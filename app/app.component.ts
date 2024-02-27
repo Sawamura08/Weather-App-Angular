@@ -26,16 +26,17 @@ export class AppComponent implements OnInit {
 	}
 
 	sendSearchToService() {
+		this.data = "";
+		this.noData = false;
 		this.manageApi.setSearchDataToUrl(this.search);
 
 		this.manageApi.getApiData().subscribe(
 			(objectData) => {
+				this.noData = true;
 				this.data = objectData;
 			},
 			(error) => {
 				console.error("Error Fetching Data:", error);
-				console.log("nodata");
-				this.noData = false;
 			}
 		);
 		this.search = "";

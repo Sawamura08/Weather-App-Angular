@@ -32,6 +32,9 @@ $bg-color: #adb5bd;
 	}
 
 	.aside-info {
+		.img {
+			margin-top: 15vh;
+		}
 		.date-wrapper {
 			.date {
 				font-size: clamp(0.5rem, 1.5vw, 3rem);
