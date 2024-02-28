@@ -14,30 +14,100 @@ $font: "Quicksand", sans-serif;
 $bg-color: #adb5bd;
 
 .weather-info {
+	position: relative;
+	background: #2980b9; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to top,
+		#ffffff,
+		#6dd5fa,
+		#2980b9
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to top,
+		#ffffff,
+		#6dd5fa,
+		#2980b9
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	.search-wrapper {
 		input[type="text"] {
-			background-color: #e9ecef;
+			background-color: transparent;
 			font-family: $font;
+			border: solid 2px white;
+			color: white;
+			position: relative;
+			z-index: 9;
 		}
 
 		input[type="text"]:focus {
 			outline: none;
-			border: solid 2px $primaryColor;
-			transition: all ease-in-out 0.1s;
+		}
+
+		input::placeholder {
+			color: white;
 		}
 		.search-icon {
-			font-size: clamp(0.7rem, 1.5vw, 4rem);
-			color: $primaryColor;
+			font-size: clamp(1rem, 1.5vw, 4rem);
+			color: white;
 		}
 	}
 
 	.aside-info {
+		.icons::before {
+			position: absolute;
+			top: 5rem;
+			left: 0;
+			width: 100%;
+			color: white;
+		}
+
+		.icons:nth-child(1)::before {
+			font-size: 5rem;
+			animation: icon1 5s linear infinite;
+			z-index: 9;
+			position: absolute;
+			top: 5rem;
+			left: 0;
+			width: 100%;
+			color: white;
+		}
+
+		.icons:nth-child(2)::before {
+			font-size: 5rem;
+			animation: icon2 5s 2s linear infinite;
+			z-index: 9;
+			position: absolute;
+			top: 5rem;
+			left: -8rem;
+			width: 100%;
+			color: white;
+		}
+
 		.img {
 			margin-top: clamp(1rem, 15vh, 20%);
 		}
+
+		@keyframes icon1 {
+			0% {
+				transform: translateX(-50%);
+			}
+			100% {
+				transform: translateX(150%);
+				z-index: -1;
+			}
+		}
+
+		@keyframes icon2 {
+			0% {
+				transform: translateX(-50%);
+			}
+			100% {
+				transform: translateX(150%);
+				z-index: -1;
+			}
+		}
 		.date-wrapper {
 			.date {
-				font-size: clamp(0.5rem, 1.5vw, 3rem);
+				font-size: clamp(1rem, 1.5vw, 3rem);
 				text-align: center;
 			}
 
@@ -56,6 +126,8 @@ $bg-color: #adb5bd;
 }
 .weather-main-info {
 	background-color: #efefef;
+	position: relative;
+	z-index: 9;
 
 	.today {
 		font-size: clamp(1rem, 2vw, 4rem);
@@ -87,6 +159,9 @@ $bg-color: #adb5bd;
 /* media queries */
 
 /* portrait */
+@media all and (width >= 375px) and (orientation: portrait) {
+}
+
 @media all and (width <= 800px) and (orientation: portrait) {
 	.weather-main {
 		flex-direction: column;
