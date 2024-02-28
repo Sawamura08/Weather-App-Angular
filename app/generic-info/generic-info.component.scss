@@ -9,12 +9,7 @@
 	font-size: 400;
 }
 
-.weather-icon {
-	background-color: #748cf1;
-	width: clamp(200px, 50%, 20rem);
-
-	.icon {
-		margin-inline: auto;
-		width: clamp(150px, 4vw, 15rem);
-	}
+.icon {
+	margin-inline: auto;
+	width: clamp(150px, 4vw, 15rem);
 }

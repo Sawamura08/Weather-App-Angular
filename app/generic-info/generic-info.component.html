@@ -6,6 +6,4 @@
 	{{ weatherCondition.weather[0].main }}
 </h4>
 
-<div class="weather-icon w-2/5 mx-auto rounded-xl">
-	<img [src]="imgPath" alt="" *ngIf="icon" class="icon" />
-</div>
+<img [src]="imgPath" alt="" *ngIf="icon" class="icon" />

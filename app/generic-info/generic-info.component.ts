@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from "@angular/core";
+import { iconSource } from "../icon-components";
 
 @Component({
 	selector: "app-generic-info",
@@ -11,8 +12,10 @@ export class GenericInfoComponent implements OnChanges {
 	@Input() weatherCondition: any;
 	@Input() icon: any;
 
+	iconObject: any = iconSource;
 	temp: number = 0;
 	imgPath: string = "";
+	temporaryPath: string = "";
 
 	ngOnChanges(changes: SimpleChanges): void {
 		if (changes["mainTemp"] && changes["mainTemp"].currentValue) {
@@ -21,7 +24,13 @@ export class GenericInfoComponent implements OnChanges {
 
 		if (changes["icon"] && changes["icon"].currentValue) {
 			this.imgPath = changes["icon"].currentValue.weather[0].icon;
-			this.imgPath = `https://openweathermap.org/img/wn/${this.imgPath}@2x.png`;
+
+			for (let key of Object.keys(this.iconObject)) {
+				this.temporaryPath = this.iconObject[this.imgPath];
+				console.log(this.temporaryPath);
+			}
+
+			this.imgPath = this.temporaryPath;
 		}
 	}
 }
