@@ -9,9 +9,12 @@
 	font-family: "Quicksand", sans-serif;
 }
 
-$primaryColor: #748cf1;
+$primaryColor: #000046;
+$secondary: #1cb5e0;
 $font: "Quicksand", sans-serif;
 $bg-color: #adb5bd;
+$bg-primary: #6dd5fa;
+$bg-secondary: #2980b9;
 
 .weather-info {
 	position: relative;
@@ -147,11 +150,22 @@ $bg-color: #adb5bd;
 		.infos {
 			width: 15rem;
 			background-color: $primaryColor;
+			background: -webkit-linear-gradient(to bottom, $primaryColor, $secondary);
+			background: linear-gradient(to bottom, $primaryColor, $secondary);
 			margin: 0 auto;
+			cursor: pointer;
+			transition: all 1s ease-in-out;
 
 			h3 {
 				font-size: clamp(1.5rem, 1.8vw, 3rem);
 			}
+		}
+
+		.infos:hover {
+			transform: scale(1.1);
+			background-color: #56ccf2;
+			background: -webkit-linear-gradient(to bottom, #56ccf2, #2f80ed);
+			background: linear-gradient(to bottom, #56ccf2, #2f80ed);
 		}
 	}
 }
@@ -172,6 +186,9 @@ $bg-color: #adb5bd;
 
 		.weather-main-info {
 			width: 100%;
+			background-color: #2980b9;
+			background: -webkit-linear-gradient(to bottom, #ffffff, $bg-primary, $bg-secondary);
+			background: linear-gradient(to bottom, #ffffff, $bg-primary, $bg-secondary);
 		}
 	}
 }
